@@ -1,5 +1,6 @@
 package com.djaktra.app;
 
+import com.djaktra.graph.BreadthFirstSearch;
 import com.djaktra.graph.Dijkstra;
 import com.djaktra.graph.DepthFirstSearch;
 import com.djaktra.graph.WeightedGraph;
@@ -36,5 +37,12 @@ public final class DjaktraApplication {
         System.out.println("Ruta encontrada por DFS de A hasta E: "
                 + String.join(" -> ",
                         DepthFirstSearch.findPath(graph, "A", "E")));
+
+        System.out.println();
+        System.out.println("Recorrido BFS desde A: "
+                + String.join(" -> ", BreadthFirstSearch.traverse(graph, "A")));
+        System.out.println("Ruta con menos aristas por BFS de A hasta E: "
+                + String.join(" -> ",
+                        BreadthFirstSearch.findPath(graph, "A", "E")));
     }
 }
