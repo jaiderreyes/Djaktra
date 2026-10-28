@@ -69,7 +69,7 @@ La parte central es la **relajación de aristas**. Si pasar por el vértice actu
 produce una distancia menor, se actualizan la distancia y el predecesor:
 
 ```java
-int candidateDistance = current.distance() + edge.weight();
+int candidateDistance = Math.addExact(current.distance(), edge.weight());
 
 if (candidateDistance < destinationDistance) {
     distances.put(edge.destination(), candidateDistance);
