@@ -1,7 +1,7 @@
 # Djaktra
 
-Implementación educativa de los algoritmos de Dijkstra y búsqueda en
-profundidad (DFS) en Java 17, construida como proyecto Maven compatible con
+Implementación educativa de Dijkstra, búsqueda en profundidad (DFS) y búsqueda
+por anchura (BFS) en Java 17, construida como proyecto Maven compatible con
 Apache NetBeans.
 
 ## Características
@@ -13,6 +13,8 @@ Apache NetBeans.
 - Reconstrucción de la ruta más corta.
 - Recorrido DFS completo desde un vértice inicial.
 - Búsqueda de rutas mediante DFS con retroceso.
+- Recorrido BFS por niveles mediante una cola.
+- Búsqueda BFS de una ruta con el menor número de aristas.
 - Prueba automática con JUnit 5.
 
 ## Ejecutar en NetBeans
@@ -27,5 +29,5 @@ mvn test
 mvn exec:java
 ```
 
-El ejemplo incluido calcula la ruta más corta con Dijkstra y realiza un
-recorrido en profundidad desde `A`.
+El ejemplo incluido calcula la ruta más corta con Dijkstra y realiza recorridos
+por profundidad y por anchura desde `A`.
