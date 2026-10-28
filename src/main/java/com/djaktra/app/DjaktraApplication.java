@@ -1,6 +1,7 @@
 package com.djaktra.app;
 
 import com.djaktra.graph.Dijkstra;
+import com.djaktra.graph.DepthFirstSearch;
 import com.djaktra.graph.WeightedGraph;
 
 /** Punto de entrada inicial de Djaktra. */
@@ -28,5 +29,12 @@ public final class DjaktraApplication {
         System.out.println("Distancia mínima: " + result.distanceTo(destination));
         System.out.println("Ruta más corta: "
                 + String.join(" -> ", result.pathTo(destination)));
+
+        System.out.println();
+        System.out.println("Recorrido DFS desde A: "
+                + String.join(" -> ", DepthFirstSearch.traverse(graph, "A")));
+        System.out.println("Ruta encontrada por DFS de A hasta E: "
+                + String.join(" -> ",
+                        DepthFirstSearch.findPath(graph, "A", "E")));
     }
 }
